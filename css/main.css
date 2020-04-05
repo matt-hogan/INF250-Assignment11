@@ -64,7 +64,7 @@ div {
 @media screen and (min-width: 768px){
     body {
         font-size: 24px;
-        grid-template-columns: repeat(2, 49%);
+        grid-template-columns: repeat(2, 2fr);
         grid-template-rows: auto;
         grid-template-areas:
             "head head"
@@ -78,7 +78,7 @@ div {
 @media screen and (min-width: 1024px){
     body {
         max-width: 960px;
-        grid-template-columns: repeat(3, 32.3%);
+        grid-template-columns: repeat(3, 3fr);
         grid-template-areas:
             "head head head"
             "sec6 sec5 sec4"
