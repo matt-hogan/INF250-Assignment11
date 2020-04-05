@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100vw;
+    min-height: 100vh;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(8,auto);
+    grid-gap: 15px;
+    grid-template-areas: 
+        "head"
+        "sec1"
+        "sec2"
+        "sec3"
+        "sec4"
+        "sec5"
+        "sec6"
+        "foot";
+    padding: 20px;
+    background-color: #000;
+}
+
+header { grid-area: head; }
+#s1 { grid-area: sec1; }
+#s2 { grid-area: sec2; }
+#s3 { grid-area: sec3; }
+#s4 { grid-area: sec4; }
+#s5 { grid-area: sec5; }
+#s6 { grid-area: sec6; }
+footer { grid-area: foot; }
+
+header, div, footer {
+    border-radius: 10px;
+    background-color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1, p {
+    text-align: center;
+}
+
+div {
+    font-size: 250%;
+}
+
+
+@media screen and (min-width: 768px){
+    body {
+        font-size: 24px;
+        grid-template-columns: repeat(2, 49%);
+        grid-template-rows: auto;
+        grid-template-areas:
+            "head head"
+            "sec1 sec2"
+            "sec5 sec6"
+            "sec3 sec4"
+            "foot foot";
+    }
+}
+
+@media screen and (min-width: 1024px){
+    body {
+        max-width: 960px;
+        grid-template-columns: repeat(3, 32.3%);
+        grid-template-areas:
+            "head head head"
+            "sec6 sec5 sec4"
+            "sec3 sec2 sec1"
+            "foot foot foot";
+    }
+}
